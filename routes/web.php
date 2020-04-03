@@ -4,6 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','MoviesController@index');
-Route::view('/show','show');
+Route::get('/movies/{movie}','MoviesController@show')->name('movies.show');
 
 Route::get('test', 'MoviesController@test');
